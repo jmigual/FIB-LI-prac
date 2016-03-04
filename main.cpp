@@ -52,7 +52,6 @@ void readClauses( ){
 }
 
 
-
 int currentValueInModel(int lit){
   if (lit >= 0) return model[lit];
   else {
