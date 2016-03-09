@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <algorithm>
+#include <iomanip>
 #include <vector>
 #include <chrono>
 using namespace std;
@@ -9,10 +10,12 @@ using namespace std;
 #define TRUE 1
 #define FALSE 0
 
+typedef unsigned int uint;
+
 uint numVars;
 uint numClauses;
-vector<vector<int> > clauses;   // Has the expressions
-vector<int> model;              // Contains the current result
+vector< vector<int> > clauses;   // Has the expressions
+vector<short> model;              // Contains the current result
 vector<int> modelStack;         // Contains the recursion and decisions
 uint indexOfNextLitToPropagate; // Next index to be propagated
 uint decisionLevel;             // DL
@@ -21,7 +24,6 @@ vector< vector<int> > clausesLitPositive;
 vector< vector<int> > clausesLitNegative;
 long long totalPropagate = 0;
 chrono::high_resolution_clock::time_point totalTime;
-
 
 void readClauses( ){
   // Skip comments
@@ -51,7 +53,6 @@ void readClauses( ){
   }
 }
 
-
 int currentValueInModel(int lit){
   if (lit >= 0) return model[lit];
   else {
@@ -60,13 +61,11 @@ int currentValueInModel(int lit){
   }
 }
 
-
 void setLiteralToTrue(int lit){
   modelStack.push_back(lit);
   if (lit > 0) model[lit] = TRUE;
   else model[-lit] = FALSE;
 }
-
 
 bool checkClausules ( vector< vector<int> > &clausesLit, int lit) 
 {
@@ -117,7 +116,6 @@ bool propagateGivesConflict () {
   return ret;
 }
 
-
 void backtrack(){
   uint i = modelStack.size() -1;
   int lit = 0;
@@ -163,10 +161,14 @@ void checkmodel(){
 }
 
 void showTimes() {
+  cout.setf(ios::fixed);
+  cout.precision(2);
+  
   auto elapsed = chrono::high_resolution_clock::now() - totalTime;
   long long tTime = chrono::duration_cast<chrono::microseconds> (elapsed).count();
-  cout << "Total Propagate: " << totalPropagate/double(tTime) * 100.0 << " " << totalPropagate << endl;
-  cout << "Total Time     : " << tTime << endl;
+  cout << "Total Propagate: " << setw(6) << setfill('0') << totalPropagate/1000.0 << " ms "
+       << totalPropagate/double(tTime) * 100.0 << "%" <<  endl;
+  cout << "Total Time     : " << tTime/1000.0 << " ms" << endl;
 }
 
 int main(){
@@ -221,5 +223,4 @@ int main(){
     ++decisionLevel;
     setLiteralToTrue(decisionLit);    // now push decisionLit on top of the mark
   }
-  
 }
