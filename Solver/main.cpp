@@ -106,7 +106,7 @@ bool propagateGivesConflict () {
       ret = true;
       break;
     }
-    else if (lit < 0 && checkClausulesForConflict(clausesLitPositive[lit])) {
+    else if (lit < 0 && checkClausulesForConflict(clausesLitPositive[-lit])) {
       ret = true;
       break;
     }
