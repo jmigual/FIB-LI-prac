@@ -20,10 +20,18 @@ vector<int> modelStack;         // Contains the recursion and decisions
 uint indexOfNextLitToPropagate; // Next index to be propagated
 uint decisionLevel;             // DL
 
-vector< vector<int> > clausesLitPositive; // Clauses where the literal is Positive
-vector< vector<int> > clausesLitNegative; // Clauses where the literal is Negative
+vector< int > literalCounter;               // Counts how many times a litearl appears
+vector< vector<int> > clausesLitPositive;   // Clauses where the literal is Positive
+vector< vector<int> > clausesLitNegative;   // Clauses where the literal is Negative
 long long totalPropagate = 0;
 chrono::high_resolution_clock::time_point totalTime;
+
+void sortLiterals(int a, int b) {
+    int numA = clausesLitPositive[a].size() + clausesLitNegative[a].size();
+    int numB = clausesLitPositive[b].size() + clausesLitNegative[b].size();
+    
+    return numA > numB;
+}
 
 void readClauses( ){
   // Skip comments
@@ -32,12 +40,15 @@ void readClauses( ){
     while (c != '\n') c = cin.get();
     c = cin.get();
   }
+  
   // Read "cnf numVars numClauses"
   string aux;
   cin >> aux >> numVars >> numClauses;
   clauses.resize(numClauses);
   clausesLitPositive.resize(numVars + 1);
   clausesLitNegative.resize(numVars + 1);
+  literalCounter.resize(numVars + 1);
+  for (uint i = 0; i < numVars + 1; ++i) literalCounter[i] = i;
   
   // Read clauses
   for (uint i = 0; i < numClauses; ++i) {
@@ -51,6 +62,8 @@ void readClauses( ){
       clauses[i].push_back(lit);
     }
   }
+  
+  sort(literalCounter.begin(), literalCounter.end(), literalSort);
 }
 
 int currentValueInModel(int lit){
@@ -140,7 +153,8 @@ int getNextDecisionLiteral(){
   // stupid heuristic:
   for (uint i = 1; i <= numVars; ++i)
   {
-    if (model[i] == UNDEF) return i;  // returns first UNDEF var, positively
+      if (model[literalCounter[i]] == UNDEF) return i;
+      //if (model[i] == UNDEF) return i;  // returns first UNDEF var, positively
   }
   return 0; // reurns 0 when all literals are defined
 }
@@ -225,3 +239,4 @@ int main(){
     setLiteralToTrue(decisionLit);    // now push decisionLit on top of the mark
   }
 }
+
