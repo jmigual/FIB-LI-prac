@@ -6,5 +6,6 @@ CONFIG -= qt
 
 SOURCES += main.cpp
 
-DISTFILES += \
-    Makefile
+TARGET = Practica1.exe
+
+# DISTFILES += Makefile

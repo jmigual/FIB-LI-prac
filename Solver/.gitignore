@@ -34,3 +34,5 @@ release/
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+
+Makefile

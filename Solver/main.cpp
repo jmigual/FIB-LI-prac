@@ -14,14 +14,14 @@ typedef unsigned int uint;
 
 uint numVars;
 uint numClauses;
-vector< vector<int> > clauses;   // Has the expressions
-vector<short> model;              // Contains the current result
+vector< vector<int> > clauses;  // Has the expressions
+vector<short> model;            // Contains the current result
 vector<int> modelStack;         // Contains the recursion and decisions
 uint indexOfNextLitToPropagate; // Next index to be propagated
 uint decisionLevel;             // DL
 
-vector< vector<int> > clausesLitPositive;
-vector< vector<int> > clausesLitNegative;
+vector< vector<int> > clausesLitPositive; // Clauses where the literal is Positive
+vector< vector<int> > clausesLitNegative; // Clauses where the literal is Negative
 long long totalPropagate = 0;
 chrono::high_resolution_clock::time_point totalTime;
 
@@ -67,12 +67,12 @@ void setLiteralToTrue(int lit){
   else model[-lit] = FALSE;
 }
 
-bool checkClausules ( vector< vector<int> > &clausesLit, int lit) 
+// Checks the selected clauses passed in the selected vector
+bool checkClausulesForConflict ( vector<int> &selectedClauses) 
 {
-  int alit = abs(lit);
-  for (uint i = 0; i < clausesLit[alit].size(); ++i)
+  for (uint i = 0; i < selectedClauses.size(); ++i)
   {
-    int numClause = clausesLit[alit][i];
+    int numClause = selectedClauses[i];
     
     bool someLitTrue = false;
     int numUndefs = 0;
@@ -101,11 +101,12 @@ bool propagateGivesConflict () {
     int lit = modelStack[indexOfNextLitToPropagate];
     ++indexOfNextLitToPropagate;
     
-    if (checkClausules(clausesLitNegative, lit)) {
+    // Checks only the clauses where the Literal is assigned false    
+    if (lit > 0 && checkClausulesForConflict(clausesLitNegative[lit])) {
       ret = true;
       break;
     }
-    if (lit < 0 && checkClausules(clausesLitPositive, lit)) {
+    else if (lit < 0 && checkClausulesForConflict(clausesLitPositive[lit])) {
       ret = true;
       break;
     }
