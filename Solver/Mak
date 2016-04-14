@@ -1,0 +1,5 @@
+all:
+	g++ main.cpp -o Practica.exe -std=c++11 -static
+
+clean:
+	rm *.exe
