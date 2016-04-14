@@ -35,4 +35,7 @@ release/
 *.qmlproject.user
 *.qmlproject.user.*
 
-Makefile
+Makefile*
+Build/
+release/
+debug/
