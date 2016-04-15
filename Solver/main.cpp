@@ -140,7 +140,6 @@ bool propagateGivesConflict () {
     ++propagations;
     lit = modelStack[indexOfNextLitToPropagate];
     ++indexOfNextLitToPropagate;
-    
     // Checks only the clauses where the Literal is assigned false
     if ((lit > 0 && checkClausulesForConflict(clausesLitNeg[lit])) ||
         (lit < 0 && checkClausulesForConflict(clausesLitPos[-lit]))) {
