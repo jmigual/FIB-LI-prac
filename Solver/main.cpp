@@ -189,21 +189,24 @@ void checkmodel() {
 }
 
 void printResults() {
+  cout << (satisfiable ? "SATISFIABLE" : "UNSATISFIABLE" )  << endl;
+
   cout.setf(ios::fixed);
   cout.precision(2);
   
   auto elapsed = chrono::high_resolution_clock::now() - totalTime;
   long long tTime = chrono::duration_cast<chrono::microseconds> (elapsed).count();
   cout << "Total Propagate: ";
-  cout << setw(7) << setfill(' ') << totalPropagate / 1000.0 << " ms "
+  cout << totalPropagate / 1000.0 << " ms "
        << totalPropagate / double(tTime) * 100.0 << "%" <<  endl;
   cout << "Total Time     : ";
-  cout << setw(7) << setfill(' ') << tTime / 1000.0 << " ms" << endl;
+  cout << tTime / 1000.0 << " ms" << endl;
   
+  cout << endl;
+
   cout << "Decisions      : " << decisions << endl;
   cout << "Propagations   : " << propagations << endl;
-  
-  cout << (satisfiable ? "SATISFIABLE" : "UNSATISFIABLE" )  << endl;
+  cout << "Propagations/s : " << propagations/(tTime/1.0e6) << endl;
 }
 
 int main() {
