@@ -1,0 +1,398 @@
+Total Propagate: 14.639 ms 76.3522%
+Conflicts      : 1194
+Total Propagate: 3.726 ms 62.5063%
+Conflicts      : 314
+Total Propagate: 0.636 ms 30.6358%
+Conflicts      : 47
+Total Propagate: 11.029 ms 78.231%
+Conflicts      : 989
+Total Propagate: 13.843 ms 77.617%
+Conflicts      : 1299
+Total Propagate: 6.375 ms 74.3267%
+Conflicts      : 632
+Total Propagate: 14.411 ms 78.3505%
+Conflicts      : 1630
+Total Propagate: 5.202 ms 73.8082%
+Conflicts      : 673
+Total Propagate: 1.905 ms 60.7849%
+Conflicts      : 271
+Total Propagate: 4.642 ms 72.249%
+Conflicts      : 711
+Total Propagate: 77.367 ms 81.9409%
+Conflicts      : 9438
+Total Propagate: 50.143 ms 82.6774%
+Conflicts      : 4258
+Total Propagate: 81.37 ms 81.5837%
+Conflicts      : 10447
+Total Propagate: 40.171 ms 84.3486%
+Conflicts      : 2881
+Total Propagate: 70.449 ms 83.1698%
+Conflicts      : 7257
+Total Propagate: 90.883 ms 80.7727%
+Conflicts      : 13246
+Total Propagate: 2.517 ms 64.6379%
+Conflicts      : 375
+Total Propagate: 71.502 ms 80.592%
+Conflicts      : 8933
+Total Propagate: 0.291 ms 25.2385%
+Conflicts      : 34
+Total Propagate: 81.591 ms 83.831%
+Conflicts      : 8107
+Total Propagate: 14.745 ms 74.1738%
+Conflicts      : 1194
+Total Propagate: 4.046 ms 68.103%
+Conflicts      : 314
+Total Propagate: 0.661 ms 32.9676%
+Conflicts      : 47
+Total Propagate: 11.138 ms 78.4145%
+Conflicts      : 989
+Total Propagate: 13.89 ms 79.4214%
+Conflicts      : 1299
+Total Propagate: 7.06 ms 75.0984%
+Conflicts      : 632
+Total Propagate: 15.246 ms 78.9703%
+Conflicts      : 1630
+Total Propagate: 6.327 ms 75.1872%
+Conflicts      : 673
+Total Propagate: 2.344 ms 62.7913%
+Conflicts      : 271
+Total Propagate: 5.748 ms 74.0913%
+Conflicts      : 711
+Total Propagate: 93.498 ms 83.5311%
+Conflicts      : 9438
+Total Propagate: 32.077 ms 80.462%
+Conflicts      : 4258
+Total Propagate: 66.772 ms 79.7201%
+Conflicts      : 10447
+Total Propagate: 18.929 ms 78.6023%
+Conflicts      : 2881
+Total Propagate: 48.326 ms 80.0669%
+Conflicts      : 7257
+Total Propagate: 96.972 ms 80.7293%
+Conflicts      : 13246
+Total Propagate: 2.479 ms 64.6415%
+Conflicts      : 375
+Total Propagate: 53.428 ms 78.9596%
+Conflicts      : 8933
+Total Propagate: 0.271 ms 24.5917%
+Conflicts      : 34
+Total Propagate: 78.964 ms 82.9454%
+Conflicts      : 8107
+Total Propagate: 15.274 ms 78.2079%
+Conflicts      : 1194
+Total Propagate: 3.9 ms 66.0905%
+Conflicts      : 314
+Total Propagate: 0.624 ms 31.8855%
+Conflicts      : 47
+Total Propagate: 10.286 ms 77.6536%
+Conflicts      : 989
+Total Propagate: 14.12 ms 79.5941%
+Conflicts      : 1299
+Total Propagate: 6.422 ms 73.7652%
+Conflicts      : 632
+Total Propagate: 14.36 ms 78.672%
+Conflicts      : 1630
+Total Propagate: 6.514 ms 72.539%
+Conflicts      : 673
+Total Propagate: 2.215 ms 63.2135%
+Conflicts      : 271
+Total Propagate: 5.649 ms 73.8045%
+Conflicts      : 711
+Total Propagate: 85.931 ms 82.8131%
+Conflicts      : 9438
+Total Propagate: 41.737 ms 80.8293%
+Conflicts      : 4258
+Total Propagate: 72.089 ms 80.4888%
+Conflicts      : 10447
+Total Propagate: 43.808 ms 83.5425%
+Conflicts      : 2881
+Total Propagate: 72.745 ms 83.217%
+Conflicts      : 7257
+Total Propagate: 92.311 ms 80.8837%
+Conflicts      : 13246
+Total Propagate: 5.179 ms 68.2435%
+Conflicts      : 375
+Total Propagate: 55.137 ms 79.3909%
+Conflicts      : 8933
+Total Propagate: 0.862 ms 31.6563%
+Conflicts      : 34
+Total Propagate: 54.891 ms 80.3546%
+Conflicts      : 8107
+Total Propagate: 13.317 ms 76.0233%
+Conflicts      : 1194
+Total Propagate: 3.463 ms 66.1762%
+Conflicts      : 314
+Total Propagate: 0.545 ms 33.3742%
+Conflicts      : 47
+Total Propagate: 9.21 ms 76.635%
+Conflicts      : 989
+Total Propagate: 12.176 ms 78.988%
+Conflicts      : 1299
+Total Propagate: 7.582 ms 77.8759%
+Conflicts      : 632
+Total Propagate: 14.389 ms 78.9823%
+Conflicts      : 1630
+Total Propagate: 5.92 ms 74.1576%
+Conflicts      : 673
+Total Propagate: 3.556 ms 63.8649%
+Conflicts      : 271
+Total Propagate: 7.752 ms 76.9429%
+Conflicts      : 711
+Total Propagate: 84.012 ms 82.376%
+Conflicts      : 9438
+Total Propagate: 30.744 ms 80.0792%
+Conflicts      : 4258
+Total Propagate: 66.665 ms 79.7648%
+Conflicts      : 10447
+Total Propagate: 40.594 ms 83.0942%
+Conflicts      : 2881
+Total Propagate: 69.913 ms 82.8844%
+Conflicts      : 7257
+Total Propagate: 92.265 ms 80.8449%
+Conflicts      : 13246
+Total Propagate: 7.07 ms 69.2255%
+Conflicts      : 375
+Total Propagate: 87.54 ms 83.007%
+Conflicts      : 8933
+Total Propagate: 0.285 ms 23.021%
+Conflicts      : 34
+Total Propagate: 80.938 ms 82.6463%
+Conflicts      : 8107
+Total Propagate: 13.099 ms 78.6207%
+Conflicts      : 1194
+Total Propagate: 3.636 ms 69.4026%
+Conflicts      : 314
+Total Propagate: 0.508 ms 32.6268%
+Conflicts      : 47
+Total Propagate: 8.638 ms 76.0454%
+Conflicts      : 989
+Total Propagate: 11.303 ms 77.6732%
+Conflicts      : 1299
+Total Propagate: 5.713 ms 72.74%
+Conflicts      : 632
+Total Propagate: 12.71 ms 77.7465%
+Conflicts      : 1630
+Total Propagate: 5.021 ms 73.6001%
+Conflicts      : 673
+Total Propagate: 1.865 ms 59.6037%
+Conflicts      : 271
+Total Propagate: 4.87 ms 72.654%
+Conflicts      : 711
+Total Propagate: 76.447 ms 81.9403%
+Conflicts      : 9438
+Total Propagate: 29.207 ms 79.7026%
+Conflicts      : 4258
+Total Propagate: 65.659 ms 79.5838%
+Conflicts      : 10447
+Total Propagate: 19.042 ms 78.4784%
+Conflicts      : 2881
+Total Propagate: 47.681 ms 79.8489%
+Conflicts      : 7257
+Total Propagate: 14.432 ms 78.7472%
+Conflicts      : 1194
+Total Propagate: 3.335 ms 66.5935%
+Conflicts      : 314
+Total Propagate: 0.614 ms 35.5736%
+Conflicts      : 47
+Total Propagate: 9.233 ms 76.8264%
+Conflicts      : 989
+Total Propagate: 15.824 ms 81.078%
+Conflicts      : 1299
+Total Propagate: 5.753 ms 73.9745%
+Conflicts      : 632
+Total Propagate: 13.065 ms 77.7262%
+Conflicts      : 1630
+Total Propagate: 5.593 ms 74.4146%
+Conflicts      : 673
+Total Propagate: 2.017 ms 61.6631%
+Conflicts      : 271
+Total Propagate: 5.129 ms 72.546%
+Conflicts      : 711
+Total Propagate: 82.053 ms 82.4662%
+Conflicts      : 9438
+Total Propagate: 30.671 ms 80.0956%
+Conflicts      : 4258
+Total Propagate: 66.659 ms 79.7738%
+Conflicts      : 10447
+Total Propagate: 26.165 ms 80.3766%
+Conflicts      : 2881
+Total Propagate: 53.541 ms 80.8557%
+Conflicts      : 7257
+Total Propagate: 12.231 ms 77.9243%
+Conflicts      : 1194
+Total Propagate: 3.3 ms 67.0323%
+Conflicts      : 314
+Total Propagate: 0.551 ms 26.6699%
+Conflicts      : 47
+Total Propagate: 9.085 ms 76.4859%
+Conflicts      : 989
+Total Propagate: 13.634 ms 78.2035%
+Conflicts      : 1299
+Total Propagate: 5.26 ms 73.4227%
+Conflicts      : 632
+Total Propagate: 12.707 ms 77.7377%
+Conflicts      : 1630
+Total Propagate: 5.604 ms 73.5626%
+Conflicts      : 673
+Total Propagate: 1.868 ms 61.6095%
+Conflicts      : 271
+Total Propagate: 4.812 ms 72.35%
+Conflicts      : 711
+Total Propagate: 76.372 ms 81.902%
+Conflicts      : 9438
+Total Propagate: 28.991 ms 79.5625%
+Conflicts      : 4258
+Total Propagate: 66.379 ms 79.7192%
+Conflicts      : 10447
+Total Propagate: 19.488 ms 78.8796%
+Conflicts      : 2881
+Total Propagate: 58.397 ms 81.6856%
+Conflicts      : 7257
+Total Propagate: 84.937 ms 80.096%
+Conflicts      : 13246
+Total Propagate: 2.475 ms 64.8075%
+Conflicts      : 375
+Total Propagate: 70.881 ms 81.3714%
+Conflicts      : 8933
+Total Propagate: 0.296 ms 25.1701%
+Conflicts      : 34
+Total Propagate: 77.363 ms 82.517%
+Conflicts      : 8107
+Total Propagate: 11.268 ms 76.2021%
+Conflicts      : 1194
+Total Propagate: 2.887 ms 66.0037%
+Conflicts      : 314
+Total Propagate: 0.484 ms 30.2879%
+Conflicts      : 47
+Total Propagate: 8.71 ms 76.3031%
+Conflicts      : 989
+Total Propagate: 11.532 ms 78.3264%
+Conflicts      : 1299
+Total Propagate: 5.188 ms 73.2768%
+Conflicts      : 632
+Total Propagate: 9.218 ms 74.8032%
+Conflicts      : 1630
+Total Propagate: 4.044 ms 71.6132%
+Conflicts      : 673
+Total Propagate: 2.002 ms 61.2045%
+Conflicts      : 271
+Total Propagate: 4.249 ms 71.0298%
+Conflicts      : 711
+Total Propagate: 68.24 ms 80.95%
+Conflicts      : 9438
+Total Propagate: 39.023 ms 81.342%
+Conflicts      : 4258
+Total Propagate: 70.616 ms 80.2418%
+Conflicts      : 10447
+Total Propagate: 29.96 ms 82.6939%
+Conflicts      : 2881
+Total Propagate: 57.448 ms 81.1917%
+Conflicts      : 7257
+Total Propagate: 103.576 ms 81.8401%
+Conflicts      : 13246
+Total Propagate: 2.54 ms 65.2118%
+Conflicts      : 375
+Total Propagate: 54.269 ms 79.0229%
+Conflicts      : 8933
+Total Propagate: 0.469 ms 32.3003%
+Conflicts      : 34
+Total Propagate: 15.543 ms 79.301%
+Conflicts      : 1194
+Total Propagate: 3.795 ms 65.8625%
+Conflicts      : 314
+Total Propagate: 0.655 ms 34.6378%
+Conflicts      : 47
+Total Propagate: 10.453 ms 76.4555%
+Conflicts      : 989
+Total Propagate: 12.782 ms 78.9305%
+Conflicts      : 1299
+Total Propagate: 6.453 ms 75.0873%
+Conflicts      : 632
+Total Propagate: 15.064 ms 78.799%
+Conflicts      : 1630
+Total Propagate: 5.502 ms 73.4481%
+Conflicts      : 673
+Total Propagate: 2.182 ms 63.3566%
+Conflicts      : 271
+Total Propagate: 4.873 ms 72.2997%
+Conflicts      : 711
+Total Propagate: 78.278 ms 81.8542%
+Conflicts      : 9438
+Total Propagate: 29.921 ms 80.0134%
+Conflicts      : 4258
+Total Propagate: 66.027 ms 79.4979%
+Conflicts      : 10447
+Total Propagate: 30.223 ms 82.0296%
+Conflicts      : 2881
+Total Propagate: 57.684 ms 81.5979%
+Conflicts      : 7257
+Total Propagate: 85.28 ms 80.1361%
+Conflicts      : 13246
+Total Propagate: 4.558 ms 68.3358%
+Conflicts      : 375
+Total Propagate: 71.256 ms 81.1424%
+Conflicts      : 8933
+Total Propagate: 0.295 ms 25.1921%
+Conflicts      : 34
+Total Propagate: 76.498 ms 83.3475%
+Conflicts      : 8107
+Total Propagate: 1024.34 ms 82.8957%
+Conflicts      : 125268
+Total Propagate: 914.479 ms 83.1431%
+Conflicts      : 107016
+Total Propagate: 90.3 ms 84.6766%
+Conflicts      : 5578
+Total Propagate: 895.167 ms 82.5344%
+Conflicts      : 112043
+Total Propagate: 302.963 ms 83.9226%
+Conflicts      : 29946
+Total Propagate: 600.289 ms 83.4575%
+Conflicts      : 65959
+Total Propagate: 864.859 ms 83.2176%
+Conflicts      : 99408
+Total Propagate: 1715.84 ms 82.9035%
+Conflicts      : 207978
+Total Propagate: 80.442 ms 81.809%
+Conflicts      : 9793
+Total Propagate: 324.694 ms 82.2704%
+Conflicts      : 41606
+Total Propagate: 1227.07 ms 83.9907%
+Conflicts      : 126187
+Total Propagate: 7772.95 ms 83.7964%
+Conflicts      : 833568
+Total Propagate: 7026.36 ms 83.8681%
+Conflicts      : 750645
+Total Propagate: 4779.46 ms 83.8901%
+Conflicts      : 509043
+Total Propagate: 1992.62 ms 84.0056%
+Conflicts      : 209960
+Total Propagate: 6841.29 ms 83.8503%
+Conflicts      : 732058
+Total Propagate: 15564.9 ms 83.8572%
+Conflicts      : 1660555
+Total Propagate: 220.616 ms 83.4415%
+Conflicts      : 23555
+Total Propagate: 10087.3 ms 83.81%
+Conflicts      : 1080878
+Total Propagate: 1593.04 ms 83.5847%
+Conflicts      : 173446
+Total Propagate: 24805.7 ms 84.9656%
+Conflicts      : 2239490
+Total Propagate: 13218.5 ms 84.6919%
+Conflicts      : 1224611
+Total Propagate: 94624.4 ms 84.9929%
+Conflicts      : 8574580
+Total Propagate: 49092.7 ms 84.7004%
+Conflicts      : 4574790
+Total Propagate: 103424 ms 84.7647%
+Conflicts      : 9562949
+Total Propagate: 17351.1 ms 84.8324%
+Conflicts      : 1588534
+Total Propagate: 56831.5 ms 84.7359%
+Conflicts      : 5266610
+Total Propagate: 47202.1 ms 84.8723%
+Conflicts      : 4314981
+Total Propagate: 79079.3 ms 84.9031%
+Conflicts      : 7229731
+Total Propagate: 2602.22 ms 84.6792%
+Conflicts      : 227331

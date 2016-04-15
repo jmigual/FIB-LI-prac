@@ -7,8 +7,13 @@ SOURCES += main.cpp
 
 DESTDIR = Build
 
+QMAKE_CXXFLAGS += -Os
+
 unix {
  TARGET = Practica1.exe
 } else {
   TARGET = Practica1
 }
+
+DISTFILES += \
+    tests.sh
