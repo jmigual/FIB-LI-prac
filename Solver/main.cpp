@@ -9,7 +9,10 @@ using namespace std;
 #define TRUE    1
 #define FALSE   0
 
+const int CONFLICT_LIMIT = 20;
+
 typedef unsigned int uint;
+typedef unsigned long ulong;
 
 uint numVars;
 uint numClauses;
@@ -19,6 +22,7 @@ vector<int> modelStack;         // Contains the recursion and decisions
 uint indexOfNextLitToPropagate; // Next index to be propagated
 uint decisionLevel;             // DL
 
+vector< int > litConf;                // Conflicts from literal
 vector< float > litS;                 // Literal score
 vector< int > litOrd;                 // Literal order to select a new literal
 vector< vector<int> > clausesLitPos;  // Clauses where the literal is Positive
@@ -29,6 +33,8 @@ chrono::high_resolution_clock::time_point totalTime;
 uint propCount = 0;
 uint decisions = 0;
 uint propagations = 0;
+ulong conflicts = 0;
+ulong lastCOrder = 0;
 bool satisfiable = false;
 
 // Literal comparator
@@ -40,14 +46,19 @@ void insertionSort(int lit) {
   uint i;
   for (i = 0; i < litOrd.size() && litOrd[i] != lit; ++i);
   
-  while(i + 1 < litOrd.size() && litC(litS[i], litS[i + 1])) {
-    litS[i] = litS[i + 1];
+  while(i + 1 < litOrd.size() && litC(litOrd[i], litOrd[i + 1])) {
+    litOrd[i] = litOrd[i + 1];
     ++i;
   }
-  litS[i] = lit;
+  
+  while(i + 1 < litOrd.size() && litC(litOrd[i], litOrd[i + 1])) {
+    litOrd[i] = litOrd[i + 1];
+    ++i;
+  }
+  litOrd[i] = lit;
 }
 
-void readClauses( ) {
+void readClauses() {
   // Skip comments
   char c = cin.get();
   while (c == 'c') {
@@ -64,6 +75,7 @@ void readClauses( ) {
   clausesLitNeg.resize(numVars + 1);
   litOrd.resize(numVars);
   litS = vector<float> (numVars + 1, 0);
+  litConf = vector<int> (numVars + 1, 0);
   
   for (uint i = 0; i < numVars; ++i) litOrd[i] = i + 1;
   
@@ -91,7 +103,7 @@ int currentValueInModel(int lit) {
   }
 }
 
-void setLiteralToTrue(int lit) {  
+void setLiteralToTrue(int lit) {
   modelStack.push_back(lit);
   if (lit > 0) model[lit] = TRUE;
   else model[-lit] = FALSE;
@@ -122,28 +134,36 @@ bool checkClausulesForConflict ( vector<int> &selectedClauses) {
 bool propagateGivesConflict () {
   auto start = chrono::high_resolution_clock::now();
   bool ret = false;
+  int lit = 0;
   
-  while ( indexOfNextLitToPropagate < modelStack.size() ) {
+  while ( indexOfNextLitToPropagate < modelStack.size() && !ret ) {
     ++propagations;
-    int lit = modelStack[indexOfNextLitToPropagate];
+    lit = modelStack[indexOfNextLitToPropagate];
     ++indexOfNextLitToPropagate;
     
     // Checks only the clauses where the Literal is assigned false
-    if (lit > 0 && checkClausulesForConflict(clausesLitNeg[lit])) {
-      litS[lit] *= .95;
-      insertionSort(lit);
+    if ((lit > 0 && checkClausulesForConflict(clausesLitNeg[lit])) ||
+        (lit < 0 && checkClausulesForConflict(clausesLitPos[-lit]))) {
       ret = true;
-      break;
-    } else if (lit < 0 && checkClausulesForConflict(clausesLitPos[-lit])) {
-      litS[-lit] *= .95;
-      insertionSort(lit);
-      ret = true;
-      break;
     }
-    
   }
+  
+  // Get time
   auto elapsed = chrono::high_resolution_clock::now() - start;
   totalPropagate += chrono::duration_cast<chrono::microseconds> (elapsed).count();
+  
+  // Penalize conflict
+  if (ret) {
+    lit = abs(lit);
+    ++conflicts;
+    ++litConf[lit];
+    
+    if (litConf[lit] % CONFLICT_LIMIT == 0) {
+      litS[lit] *= .5;
+      insertionSort(lit);
+    }
+  }
+  
   return ret;
 }
 
@@ -165,7 +185,6 @@ void backtrack() {
 
 // Heuristic for finding the next decision literal:
 int getNextDecisionLiteral() {
-
   // Return the literal with the highest score and is not defined yet
   for (uint i = 1; i <= numVars; ++i) {
     if (model[litOrd[i]] == UNDEF) return litOrd[i];
@@ -190,7 +209,7 @@ void checkmodel() {
 
 void printResults() {
   cout << (satisfiable ? "SATISFIABLE" : "UNSATISFIABLE" )  << endl;
-
+  
   cout.setf(ios::fixed);
   cout.precision(2);
   
@@ -203,10 +222,11 @@ void printResults() {
   cout << tTime / 1000.0 << " ms" << endl;
   
   cout << endl;
-
+  
+  cout << "Conflicts      : " << conflicts << endl;
   cout << "Decisions      : " << decisions << endl;
   cout << "Propagations   : " << propagations << endl;
-  cout << "Propagations/s : " << propagations/(tTime/1.0e6) << endl;
+  cout << "Propagations/s : " << propagations / (totalPropagate / 1.0e6) << endl;
 }
 
 int main() {
