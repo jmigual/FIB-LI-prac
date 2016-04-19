@@ -28,6 +28,7 @@ team(T):- teams(Ts), member(T,Ts).
 matchOfT(T, T-S):- team(S), S\=T.
 matchOfT(T, S-T):- team(S), S\=T.
 round(R):- between(1,15,R).
+noDoubleR(R) :- noDoubles(M), member(R, M).
 tvMatch(S-T):- tvTeams(TV), member(S,TV), member(T,TV), S\=T.
 
 %%%%%%  Variables: It is mandatory to use these variables!
@@ -38,10 +39,21 @@ tvMatch(S-T):- tvTeams(TV), member(S,TV), member(T,TV), S\=T.
 
 writeClauses:- 
     defineHome,
-    ...
+    playOnceWeek,
+    playOnceTeam,
+    oneTvMatchWeek.
 
 defineHome:- team(T), round(R), findall( match-T-S-R, matchOfT(T,T-S), Lits ), expressOr( home-T-R, Lits ), fail.
 defineHome.
+
+playOnceWeek:- team(T), round(R), findall( match-A-B-R, matchOfT(T, A-B), Lits), exactly(1, Lits), fail.
+playOnceWeek.
+
+playOnceTeam:- team(T), matchOfT(T, T-S), findall( match-T-S-R, round(R), Lits1), findall( match-S-T-R, round(R), Lits2), append(Lits1, Lits2, Lits3), exactly(1, Lits3), fail.
+playOnceTeam.
+
+oneTvMatchWeek:- round(R), findall(match-T-S-R, tvMatch(T-S), Lits), exactly(1, Lits), fail.
+oneTvMatchWeek.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% show the solution. Here M contains the literals that are true in the model:
@@ -61,6 +73,9 @@ writeH(_,_,_):- write('.'),!.
 expressOr( Var, Lits ):- member(Lit,Lits), negate(Lit,NLit), writeClause([ NLit, Var ]), fail.
 expressOr( Var, Lits ):- negate(Var,NVar), writeClause([ NVar | Lits ]),!.
 
+% Express that Var is equivalent to the conjuntion of Lits:
+expressAnd( Var, Lits ) :- member(Lit, Lits), negate(Var, NVar), writeClause([NVar, Lit]), fail.
+expressAnd( Var, Lits ) :- negateAll(Lits, NLits), writeClause([ Var | NLits ]).
 
 %%%%%% Cardinality constraints on arbitrary sets of literals Lits:
 
@@ -89,7 +104,7 @@ subsetOfSize(N,[_|L],   S ):-            length(L,Leng), Leng>=N,  subsetOfSize(
 
 %%%%%% main:
 
-main:-  symbolicOutput(1), !, writeClauses, halt.   % print the clauses in symbolic form and halt
+main:-  symbolicOutput(1), !, writeClauses.   % print the clauses in symbolic form and halt
 main:-  initClauseGeneration,
         tell(clauses), writeClauses, told,          % generate the (numeric) SAT clauses and call the solver
     tell(header),  writeHeader,  told,
@@ -98,10 +113,11 @@ main:-  initClauseGeneration,
     shell('cat header clauses > infile.cnf',_),
     write('Calling solver....'), nl, 
     shell('picosat -v -o model infile.cnf', Result),  % if sat: Result=10; if unsat: Result=20.
-    treatResult(Result),!.
+    treatResult(Result),
+    shell('rm model header clauses infile.cnf'),!.
 
-treatResult(20):- write('Unsatisfiable'), nl, halt.
-treatResult(10):- write('Solution found: '), nl, see(model), symbolicModel(M), seen, displaySol(M), nl,nl,halt.
+treatResult(20):- write('Unsatisfiable'), nl.
+treatResult(10):- write('Solution found: '), nl, see(model), symbolicModel(M), seen, displaySol(M), nl,nl.
 
 initClauseGeneration:-  %initialize all info about variables and clauses:
     retractall(numClauses(   _)), 

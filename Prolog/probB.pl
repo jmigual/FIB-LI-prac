@@ -2,6 +2,9 @@ solve(L) :-
   caminoPuzzle(L, [], [], C),
   writeln(C).
 
+prova([[4,1],[4,2],[5,2],[5,3]]).
+
+% Comprueva un movimiento valido
 canMove([X, Y], [X2, Y2], L, [[X2,Y2] | Lout]) :-
   X1 is (X + X2)/2,
   Y1 is (Y + Y2)/2,
@@ -28,6 +31,7 @@ unPasoPuzzle(EA, Lout) :-
 
 caminoPuzzle(E,E,C,C).
 caminoPuzzle(EActual, EFinal, CHastaAhora, CTotal) :-
+  writeln(EActual),
   unPasoPuzzle(EActual, ESiguiente),
   \+member(ESiguiente, CHastaAhora),
   caminoPuzzle(ESiguiente, EFinal, [ESiguiente | CHastaAhora], CTotal).
