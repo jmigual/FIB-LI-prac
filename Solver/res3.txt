@@ -1,450 +1,450 @@
 vars-100-10.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 12.74 ms
+Total Time     : 14.78 ms
 
 Decisions      : 1193
 Propagations   : 22775
-Propagations/s : 3094849.84
+Propagations/s : 2442883.19
 
 vars-100-1.cnf
 ==============================
 SATISFIABLE
-Total Time     : 5.55 ms
+Total Time     : 5.49 ms
 
 Decisions      : 329
 Propagations   : 6918
-Propagations/s : 3222170.47
+Propagations/s : 3216178.52
 
 vars-100-2.cnf
 ==============================
 SATISFIABLE
-Total Time     : 2.93 ms
+Total Time     : 3.03 ms
 
 Decisions      : 62
 Propagations   : 1160
-Propagations/s : 3569230.77
+Propagations/s : 3152173.91
 
 vars-100-3.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 9.76 ms
+Total Time     : 10.76 ms
 
 Decisions      : 988
 Propagations   : 19844
-Propagations/s : 3771189.66
+Propagations/s : 3136895.35
 
 vars-100-4.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 12.32 ms
+Total Time     : 13.46 ms
 
 Decisions      : 1298
 Propagations   : 28170
-Propagations/s : 3890346.64
+Propagations/s : 3330574.60
 
 vars-100-5.cnf
 ==============================
 SATISFIABLE
-Total Time     : 7.10 ms
+Total Time     : 7.85 ms
 
 Decisions      : 644
 Propagations   : 14022
-Propagations/s : 4054945.05
+Propagations/s : 3325901.33
 
 vars-100-6.cnf
 ==============================
 SATISFIABLE
-Total Time     : 14.08 ms
+Total Time     : 16.21 ms
 
 Decisions      : 1650
 Propagations   : 34658
-Propagations/s : 4218354.43
+Propagations/s : 3280454.33
 
 vars-100-7.cnf
 ==============================
 SATISFIABLE
-Total Time     : 7.39 ms
+Total Time     : 8.38 ms
 
 Decisions      : 689
 Propagations   : 15489
-Propagations/s : 4153660.50
+Propagations/s : 3354775.83
 
 vars-100-8.cnf
 ==============================
 SATISFIABLE
-Total Time     : 4.12 ms
+Total Time     : 4.89 ms
 
 Decisions      : 285
 Propagations   : 5727
-Propagations/s : 4270693.51
+Propagations/s : 3109120.52
 
 vars-100-9.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 10.38 ms
+Total Time     : 8.59 ms
 
 Decisions      : 710
 Propagations   : 14528
-Propagations/s : 2527927.61
+Propagations/s : 3109589.04
 
 vars-150-10.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 81.53 ms
+Total Time     : 97.24 ms
 
 Decisions      : 9437
 Propagations   : 262660
-Propagations/s : 4456850.04
+Propagations/s : 3458282.31
 
 vars-150-1.cnf
 ==============================
 SATISFIABLE
-Total Time     : 32.64 ms
+Total Time     : 37.55 ms
 
 Decisions      : 4283
 Propagations   : 120414
-Propagations/s : 5475105.72
+Propagations/s : 4389065.06
 
 vars-150-2.cnf
 ==============================
 SATISFIABLE
-Total Time     : 69.03 ms
+Total Time     : 80.80 ms
 
 Decisions      : 10463
 Propagations   : 285653
-Propagations/s : 5992301.24
+Propagations/s : 4721068.98
 
 vars-150-3.cnf
 ==============================
 SATISFIABLE
-Total Time     : 22.99 ms
+Total Time     : 25.28 ms
 
 Decisions      : 2897
 Propagations   : 82746
-Propagations/s : 5459259.75
+Propagations/s : 4672803.25
 
 vars-150-4.cnf
 ==============================
 SATISFIABLE
-Total Time     : 48.88 ms
+Total Time     : 57.16 ms
 
 Decisions      : 7273
 Propagations   : 204171
-Propagations/s : 6116750.05
+Propagations/s : 4828449.80
 
 vars-150-5.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 110.74 ms
+Total Time     : 136.40 ms
 
 Decisions      : 13245
 Propagations   : 356847
-Propagations/s : 4427437.06
+Propagations/s : 3331624.79
 
 vars-150-6.cnf
 ==============================
 SATISFIABLE
-Total Time     : 8.88 ms
+Total Time     : 8.10 ms
 
 Decisions      : 401
 Propagations   : 11064
-Propagations/s : 2763236.76
+Propagations/s : 2656422.57
 
 vars-150-7.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 75.15 ms
+Total Time     : 84.27 ms
 
 Decisions      : 8932
 Propagations   : 231178
-Propagations/s : 4326097.53
+Propagations/s : 3607477.80
 
 vars-150-8.cnf
 ==============================
 SATISFIABLE
-Total Time     : 3.86 ms
+Total Time     : 4.31 ms
 
 Decisions      : 63
 Propagations   : 1201
-Propagations/s : 2799533.80
+Propagations/s : 1959216.97
 
 vars-150-9.cnf
 ==============================
 SATISFIABLE
-Total Time     : 81.70 ms
+Total Time     : 97.83 ms
 
 Decisions      : 8128
 Propagations   : 232117
-Propagations/s : 3865073.68
+Propagations/s : 3000284.37
 
 vars-200-10.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 971.80 ms
+Total Time     : 1158.34 ms
 
 Decisions      : 125267
 Propagations   : 4142153
-Propagations/s : 5732901.24
+Propagations/s : 4465952.41
 
 vars-200-1.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 852.56 ms
+Total Time     : 1000.67 ms
 
 Decisions      : 107015
 Propagations   : 3561791
-Propagations/s : 5586930.33
+Propagations/s : 4438833.47
 
 vars-200-2.cnf
 ==============================
 SATISFIABLE
-Total Time     : 56.72 ms
+Total Time     : 68.83 ms
 
 Decisions      : 5606
 Propagations   : 181559
-Propagations/s : 4433675.21
+Propagations/s : 3376773.86
 
 vars-200-3.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 866.13 ms
+Total Time     : 1028.71 ms
 
 Decisions      : 112042
 Propagations   : 3692762
-Propagations/s : 5739976.16
+Propagations/s : 4500497.85
 
 vars-200-4.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 258.50 ms
+Total Time     : 300.32 ms
 
 Decisions      : 29945
 Propagations   : 981850
-Propagations/s : 5058448.95
+Propagations/s : 4076840.67
 
 vars-200-5.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 523.35 ms
+Total Time     : 631.60 ms
 
 Decisions      : 65958
 Propagations   : 2186323
-Propagations/s : 5593793.50
+Propagations/s : 4313226.99
 
 vars-200-6.cnf
 ==============================
 SATISFIABLE
-Total Time     : 757.09 ms
+Total Time     : 925.74 ms
 
 Decisions      : 99435
 Propagations   : 3304531
-Propagations/s : 5896357.48
+Propagations/s : 4458202.30
 
 vars-200-7.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 1638.36 ms
+Total Time     : 1880.84 ms
 
 Decisions      : 207977
 Propagations   : 7020081
-Propagations/s : 5740082.73
+Propagations/s : 4667653.60
 
 vars-200-8.cnf
 ==============================
 SATISFIABLE
-Total Time     : 95.72 ms
+Total Time     : 129.61 ms
 
 Decisions      : 9826
 Propagations   : 319513
-Propagations/s : 4501007.23
+Propagations/s : 3058096.69
 
 vars-200-9.cnf
 ==============================
 SATISFIABLE
-Total Time     : 365.37 ms
+Total Time     : 420.67 ms
 
 Decisions      : 41633
 Propagations   : 1389630
-Propagations/s : 5066409.51
+Propagations/s : 4111988.31
 
 vars-250-10.cnf
 ==============================
 SATISFIABLE
-Total Time     : 1133.12 ms
+Total Time     : 1366.00 ms
 
 Decisions      : 126223
 Propagations   : 4946387
-Propagations/s : 5727172.42
+Propagations/s : 4415324.96
 
 vars-250-1.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 7332.04 ms
+Total Time     : 8704.52 ms
 
 Decisions      : 833567
 Propagations   : 31546299
-Propagations/s : 5633949.79
+Propagations/s : 4424133.75
 
 vars-250-2.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 6728.93 ms
+Total Time     : 7948.49 ms
 
 Decisions      : 750644
 Propagations   : 28523466
-Propagations/s : 5531751.83
+Propagations/s : 4375078.76
 
 vars-250-3.cnf
 ==============================
 SATISFIABLE
-Total Time     : 4548.42 ms
+Total Time     : 5388.20 ms
 
 Decisions      : 509075
 Propagations   : 19688542
-Propagations/s : 5668297.42
+Propagations/s : 4460366.07
 
 vars-250-4.cnf
 ==============================
 SATISFIABLE
-Total Time     : 1924.99 ms
+Total Time     : 2257.49 ms
 
 Decisions      : 210000
 Propagations   : 8175554
-Propagations/s : 5536322.59
+Propagations/s : 4426655.16
 
 vars-250-5.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 6564.98 ms
+Total Time     : 7674.25 ms
 
 Decisions      : 732057
 Propagations   : 28396170
-Propagations/s : 5660516.93
+Propagations/s : 4520624.23
 
 vars-250-6.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 14820.88 ms
+Total Time     : 17419.13 ms
 
 Decisions      : 1660554
 Propagations   : 63293199
-Propagations/s : 5594823.62
+Propagations/s : 4435322.37
 
 vars-250-7.cnf
 ==============================
 SATISFIABLE
-Total Time     : 216.30 ms
+Total Time     : 283.80 ms
 
 Decisions      : 23601
 Propagations   : 925648
-Propagations/s : 5697382.27
+Propagations/s : 4138139.45
 
 vars-250-8.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 9558.19 ms
+Total Time     : 11263.42 ms
 
 Decisions      : 1080877
 Propagations   : 41038192
-Propagations/s : 5622871.74
+Propagations/s : 4449050.38
 
 vars-250-9.cnf
 ==============================
 SATISFIABLE
-Total Time     : 1522.48 ms
+Total Time     : 1810.37 ms
 
 Decisions      : 173487
 Propagations   : 6623132
-Propagations/s : 5716826.37
+Propagations/s : 4506279.95
 
 vars-300-10.cnf
 ==============================
 SATISFIABLE
-Total Time     : 23067.90 ms
+Total Time     : 27183.56 ms
 
 Decisions      : 2239524
 Propagations   : 101381773
-Propagations/s : 5643548.25
+Propagations/s : 4468289.78
 
 vars-300-1.cnf
 ==============================
 SATISFIABLE
-Total Time     : 12397.86 ms
+Total Time     : 14574.01 ms
 
 Decisions      : 1224646
 Propagations   : 53656568
-Propagations/s : 5611156.69
+Propagations/s : 4429871.30
 
 vars-300-2.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 88384.69 ms
+Total Time     : 103978.41 ms
 
 Decisions      : 8574579
 Propagations   : 379620860
-Propagations/s : 5508185.39
+Propagations/s : 4368234.85
 
 vars-300-3.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 46734.35 ms
+Total Time     : 54602.24 ms
 
 Decisions      : 4574789
 Propagations   : 197744500
-Propagations/s : 5427810.51
+Propagations/s : 4344991.98
 
 vars-300-4.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 97208.13 ms
+Total Time     : 114240.55 ms
 
 Decisions      : 9562948
 Propagations   : 418221293
-Propagations/s : 5550200.41
+Propagations/s : 4392338.86
 
 vars-300-5.cnf
 ==============================
 SATISFIABLE
-Total Time     : 16346.09 ms
+Total Time     : 19157.78 ms
 
 Decisions      : 1588564
 Propagations   : 70500522
-Propagations/s : 5544693.44
+Propagations/s : 4411005.71
 
 vars-300-6.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 53797.58 ms
+Total Time     : 62919.84 ms
 
 Decisions      : 5266609
 Propagations   : 230087034
-Propagations/s : 5497297.24
+Propagations/s : 4389381.94
 
 vars-300-7.cnf
 ==============================
 SATISFIABLE
-Total Time     : 44098.86 ms
+Total Time     : 51803.38 ms
 
 Decisions      : 4315024
 Propagations   : 191184985
-Propagations/s : 5573829.73
+Propagations/s : 4424463.94
 
 vars-300-8.cnf
 ==============================
 UNSATISFIABLE
-Total Time     : 74290.47 ms
+Total Time     : 86983.60 ms
 
 Decisions      : 7229730
 Propagations   : 317674241
-Propagations/s : 5488187.63
+Propagations/s : 4376618.44
 
 vars-300-9.cnf
 ==============================
 SATISFIABLE
-Total Time     : 2298.19 ms
+Total Time     : 2739.78 ms
 
 Decisions      : 227363
 Propagations   : 9841839
-Propagations/s : 5523869.15
+Propagations/s : 4312597.44
 

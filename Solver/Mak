@@ -1,7 +1,0 @@
-
-all:
-	mkdir -p Build
-	g++ main.cpp -o Build/Practica1.exe -std=c++11 -static
-
-clean:
-	rm *.exe

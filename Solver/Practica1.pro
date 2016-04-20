@@ -7,7 +7,7 @@ SOURCES += main.cpp
 
 DESTDIR = Build
 
-QMAKE_CXXFLAGS += -Os
+QMAKE_CXXFLAGS += -O3 -std=c++0x
 
 unix {
  TARGET = Practica1.exe
@@ -17,3 +17,6 @@ unix {
 
 DISTFILES += \
     tests.sh
+
+OTHER_FILES += \
+    Makefile.win
