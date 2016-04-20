@@ -32,19 +32,30 @@ noDoubleR(R) :- noDoubles(M), member(R, M).
 tvMatch(S-T):- tvTeams(TV), member(S,TV), member(T,TV), S\=T.
 
 %%%%%%  Variables: It is mandatory to use these variables!
-% match-S-T-R    meaning  "match S-T (at home of S is on round R"
-% home-S-R       meaning  "team S plays at home on round R"
-% double-S-R     meaning  "team S has a double on round R"
+% match-S-T-R   meaning  "match S-T (at home of S is on round R"
+% home-S-R      meaning  "team S plays at home on round R"
+% double-S-R    meaning  "team S has a double on round R"
+
+% doubleH-S-R   meaning  "team S has a double at home on round R"
+% doubleO-S-R   meaning  "team S has a double outside on round R"
 
 
 writeClauses:- 
     defineHome,
+    defineDouble,
+    noDoubles,
     playOnceWeek,
     playOnceTeam,
     oneTvMatchWeek.
 
 defineHome:- team(T), round(R), findall( match-T-S-R, matchOfT(T,T-S), Lits ), expressOr( home-T-R, Lits ), fail.
 defineHome.
+
+defineDouble:- team(T), round(R), R1 is R - 1, round(R1), expressAnd(doubleH-T-R , [home-T-R, home-T-R1]), expressAnd(doubleO-T-R, [\+home-T-R, \+home-T-R1]), expressOr(double-T-R, [doubleH-T-R, doubleO-T-R]), fail.
+defineDouble.
+
+noDoubles:- team(T), noDoubleR(R), writeClause([\+double-T-R]), fail.
+noDoubles.
 
 playOnceWeek:- team(T), round(R), findall( match-A-B-R, matchOfT(T, A-B), Lits), exactly(1, Lits), fail.
 playOnceWeek.
@@ -75,7 +86,7 @@ expressOr( Var, Lits ):- negate(Var,NVar), writeClause([ NVar | Lits ]),!.
 
 % Express that Var is equivalent to the conjuntion of Lits:
 expressAnd( Var, Lits ) :- member(Lit, Lits), negate(Var, NVar), writeClause([NVar, Lit]), fail.
-expressAnd( Var, Lits ) :- negateAll(Lits, NLits), writeClause([ Var | NLits ]).
+expressAnd( Var, Lits ) :- negateAll(Lits, NLits), writeClause([ Var | NLits ]), !.
 
 %%%%%% Cardinality constraints on arbitrary sets of literals Lits:
 
@@ -104,7 +115,7 @@ subsetOfSize(N,[_|L],   S ):-            length(L,Leng), Leng>=N,  subsetOfSize(
 
 %%%%%% main:
 
-main:-  symbolicOutput(1), !, writeClauses.   % print the clauses in symbolic form and halt
+main:-  symbolicOutput(1), !, writeClauses, halt.   % print the clauses in symbolic form and halt
 main:-  initClauseGeneration,
         tell(clauses), writeClauses, told,          % generate the (numeric) SAT clauses and call the solver
     tell(header),  writeHeader,  told,
@@ -113,8 +124,7 @@ main:-  initClauseGeneration,
     shell('cat header clauses > infile.cnf',_),
     write('Calling solver....'), nl, 
     shell('picosat -v -o model infile.cnf', Result),  % if sat: Result=10; if unsat: Result=20.
-    treatResult(Result),
-    shell('rm model header clauses infile.cnf'),!.
+    treatResult(Result), !, halt.
 
 treatResult(20):- write('Unsatisfiable'), nl.
 treatResult(10):- write('Solution found: '), nl, see(model), symbolicModel(M), seen, displaySol(M), nl,nl.
