@@ -1,4 +1,5 @@
 model
+model2
 *.exe
 *.cnf
 clauses

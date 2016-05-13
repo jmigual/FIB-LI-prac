@@ -59,7 +59,7 @@ writeClauses(K):-
     sameRoom,
     noOverlappingR,
     threeHoursDay,
-    atMostKLate(0),
+    atMostKLate(K),
     true.
     
 defineLate:- day(D), findAll(courseHour-C-D-5, course(C), Lits), expressOr(late-D, Lits), fail.
@@ -152,9 +152,9 @@ subsetOfSize(N,[_|L],   S ):-            length(L,Leng), Leng>=N,  subsetOfSize(
 main:-  symbolicOutput(1), !, writeClauses(5), halt.   % print the clauses in symbolic form and halt
 main:-  searchLoop(5).
   
-
+treatResult( 0, K):- write('Time limit last K: '), K1 is K+1, write(K1), nl, see(model2), symbolicModel(M), seen, displaySol(M), nl,nl,halt.
 treatResult(20, _):- write('Unsatisfiable'), nl, halt.
-%treatResult(10, K):- K1 is K-1, K1 >= 0, searchLoop(K1), !.
+treatResult(10, K):- K1 is K-1, K1 >= 0, shell('cp model model2'), searchLoop(K1), !.
 treatResult(10, _):- write('Solution found: '), nl, see(model), symbolicModel(M), seen, displaySol(M), nl,nl,halt.
 
 searchLoop(K) :-
@@ -166,7 +166,7 @@ searchLoop(K) :-
   write('Generated '), write(C), write(' clauses over '), write(N), write(' variables. '),nl,
   shell('cat header clauses > infile.cnf',_),
   write('Calling solver....'), nl, 
-  shell('picosat -v -o model infile.cnf', Result),  % if sat: Result=10; if unsat: Result=20.
+  shell('picosat -l 10000 -v -o model infile.cnf', Result),  % if sat: Result=10; if unsat: Result=20. Set also picosat limit
   treatResult(Result, K),!.
 
 initClauseGeneration:-  %initialize all info about variables and clauses:
