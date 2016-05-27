@@ -1,7 +1,5 @@
 :- use_module(library(clpfd)).
 
-product(N):- between(1, 6, N).
-
 example1([1,2,3,5,6,7], [1,4,7,11,14,15]).
 
 % Crea variables sense nom
