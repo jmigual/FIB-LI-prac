@@ -55,7 +55,9 @@ p:- ejemplo1(RowSums,ColSums),
     declareConstraints(MatrixByCols, ColSums),
 
     L ins 0..1,
-    pretty_print(RowSums,ColSums,MatrixByRows), nl.
+    label(L), % labeling([ff], L),
+    pretty_print(RowSums,ColSums,MatrixByRows), nl,
+    !.
     
 pretty_print(_,ColSums,_):- write('     '), member(S,ColSums), writef('%2r ',[S]), fail.
 pretty_print(RowSums,_,M):- nl,nth1(N,M,Row), nth1(N,RowSums,S), nl, writef('%3r   ',[S]), member(B,Row), wbit(B), fail.
